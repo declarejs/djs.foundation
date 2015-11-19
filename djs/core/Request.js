@@ -3,7 +3,7 @@ define(["declare", "./messages"], function(declare){
 
 
 
-	declare("djs.core.Request", "djs.Map", function(self, parent, core){
+	declare("djs.core.Request", "djs.core.Map", function(self, parent, core){
 
         self.ErrorMap = undefined;
         self.Response = undefined;

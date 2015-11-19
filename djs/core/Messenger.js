@@ -8,7 +8,7 @@ define(["declare", "./messages"], function(declare){
 
 
 
-	declare("djs.core.Report", "djs.Map", function(self, parent, core){
+	declare("djs.core.Report", "djs.core.Map", function(self, parent, core){
 
 		self.__construct = function(){
             this._type = declare.ListMap;

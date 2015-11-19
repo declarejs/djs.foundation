@@ -4,13 +4,18 @@ define(["declare", "./Map"], function(declare){
 
 
 
-	declare("djs.core.List", "djs.core.Map", function(self, parent, core){
+	d("djs.core.MapOf", "djs.core.Map", function(self, parent, lib){
 
-		// --- WIP		
+		self.__construct = function(type, items){
+			runtime();
+			this.items = {};
+			if(type) this.type(type);
+			if(items === undefined) return;
+			for(var item in items) this.set(item, items[item]);
+		}
 
 		// END OF CLASS
-
-	}, "djs.core");
+	});
 
 
 
