@@ -1,7 +1,7 @@
 define(["declare", "./Base"], function(declare){
 
 
-	declare("djs.core.Model", "djs.Map", function(self, parent, lib){
+	declare("djs.core.Model", "djs.core.Map", function(self, parent, lib){
 
 		self.appendable = true;
 		self.Fields = undefined;

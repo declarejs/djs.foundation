@@ -45,4 +45,3 @@ define(['declare', "./all.globals"], function(declare){
 
 
 });
-

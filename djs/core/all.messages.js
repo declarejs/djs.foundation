@@ -2,18 +2,23 @@ define(["declare", "./Message"], function(declare){
 
 
 
+	// for minification
+	
+	var dc = "djs.core.", 
+		dcm = dc + "Message"; 
 
-	var dcm = "djs.core.Message"; // for minification
 
-	declare("djs.core.Error", dcm);
+	// message classes
 
-	declare("djs.core.Warning", dcm);
+	declare(dc + "Error", dcm);
 
-	declare("djs.core.Notice", dcm);
+	declare(dc + "Warning", dcm);
 
-	declare("djs.core.Affirm", dcm);
+	declare(dc + "Notice", dcm);
 
-	declare("djs.core.MessageList", "djs.List", function(self, parent, core){
+	declare(dc + "Affirm", dcm);
+
+	declare(dc + "MessageList", dc + "List", function(self, parent, core){
 
 		self.__construct = function(){
             this._type = core.Message;
