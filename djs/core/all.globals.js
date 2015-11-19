@@ -1,6 +1,6 @@
 define(['declare'], function(declare){
 
-	
+	// tesgin
 	declare.globals("djs.core", function(self, core){
 
 
