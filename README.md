@@ -1,2 +1,2 @@
 # djs.core
-Core Class Library
+Declarejs core classes
