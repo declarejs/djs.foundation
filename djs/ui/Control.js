@@ -9,11 +9,6 @@ define(["declare", "../core/all"], function(declare){
 			this[keys.Controller] = this.make_Controller();
 			parent.__construct.apply(this, arguments);
 		},
-		
-		"submit": function(){
-			if(this[keys.Controller]) this[keys.Controller].submit();
-			return this;
-		},
 
 		"thi trigger": function(event){
 			this[keys.element].trigger.apply(this[keys.element], arguments);
@@ -29,6 +24,16 @@ define(["declare", "../core/all"], function(declare){
 
 		"make_Controller": function(){
 			return new cController();
+		},
+		
+		"submit": function(values){
+			if(this[keys.Controller]) this[keys.Controller].submit(values);
+			return this;
+		},
+		
+		"process": function(){
+			if(this[keys.Controller]) this[keys.Controller].process();
+			return this;
 		}
 
 	}});

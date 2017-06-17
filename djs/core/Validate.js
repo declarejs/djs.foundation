@@ -13,7 +13,7 @@ define(["declare", "./all"], function(declare){
 			parent.__construct.apply(this, arguments);
 		},
 
-		"submit": function(){
+		"process": function(){
 			var value = this[keys.value],
 				value2 = declare.cast(this[keys.value], this[keys.type]);
 			if(value2 === undefined) return declare.make("djs.core.InvalidValueError");

@@ -29,28 +29,28 @@ define(["declare"], function(declare){
 			return this;
 		},
 
-
-		// --- functions --- //
+		// --- casts --- //
 
 		"Model to_Model": function(){
 			return this[keys.Model];
 		},
 
+
+		// --- functions --- //
+
 		"djs.core.Request request": function(Obj){
 			mustCast(Obj, "djs.core.Request");
 			var inputs = Obj.get("inputs");
-			if(inputs) declare.attributes(this, inputs);
-			return Obj.values({Error: this.submit(), outputs: this.values()});
+			if(inputs) declare.props(this, inputs);
+			return Obj.props({Error: this.process(), outputs: this.props()});
 		},
 
-		"djs.core.Error submitWith": function(values){
-			if(values) declare.attributes(this, values);
-			return this.submit();
+		"djs.core.Error submit": function(values){
+			if(values) declare.props(this, values); // won't through errors
+			return this.process();
 		},
 
-		// main override
-
-		"djs.core.Error submit": function(){}
+		"djs.core.Error process": function(){} // main override
 
 	}});
 
